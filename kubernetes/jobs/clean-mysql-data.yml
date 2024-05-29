@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: clean-mysql-data
+spec:
+  template:
+    spec:
+      containers:
+      - name: cleaner
+        image: busybox
+        command: ["sh", "-c", "rm -rf /var/lib/mysql/*"]
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+      restartPolicy: OnFailure
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: todo-app-pvc

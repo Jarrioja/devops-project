@@ -3,14 +3,15 @@ kind: Ingress
 metadata:
   name: todo-app-ingress
 spec:
+  ingressClassName: nginx
   rules:
-  - host: todo-app.jesusarrioja.dev
+  - host: todo-app.jesusarrioja.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: todo-app-service
+            name: todo-app
             port:
               number: 3000
