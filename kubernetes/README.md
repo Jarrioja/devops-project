@@ -17,3 +17,14 @@ ubectl delete validatingwebhookconfiguration nginx-ingress-ingress-nginx-admissi
 ```
 
 Aplica y despluega el ingress
+
+
+# Inicializar secretos y helm charts
+```bash
+chmod +x /kubernetes/scripts/init.sh
+```
+
+```bash
+cd /kubernetes/scripts
+./install_apps.sh
+```
