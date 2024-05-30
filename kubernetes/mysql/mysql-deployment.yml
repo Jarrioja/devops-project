@@ -27,7 +27,4 @@ spec:
       volumes:
         - name: mysql-persistent-storage
           persistentVolumeClaim:
-            claimName: todo-app-pvc
-
-
-
+            claimName: mysql-pvc
