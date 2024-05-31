@@ -23,7 +23,12 @@ resource "digitalocean_kubernetes_cluster" "devops-cluster" {
     node_count = 1
   }
   provisioner "local-exec" {
-    command = "doctl kubernetes cluster kubeconfig save ${digitalocean_kubernetes_cluster.devops-cluster.id}"
+    command = <<-EOT
+      doctl kubernetes cluster kubeconfig save ${digitalocean_kubernetes_cluster.devops-cluster.id}
+      cd ../kubernetes/scripts/
+      chmod +x ./init.sh
+      ./init.sh
+    EOT
   }
 }
 
