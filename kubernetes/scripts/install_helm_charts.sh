@@ -10,8 +10,8 @@ helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
 
 # Instalar ingress-nginx
-helm install ingress-nginx ingress-nginx/ingress-nginx
-
+helm install nginx-ingress ingress-nginx/ingress-nginx --set controller.publishService.enabled=true
+kubectl delete validatingwebhookconfiguration nginx-ingress-ingress-nginx-admission
 # Instalar Prometheus
 helm install prometheus prometheus-community/prometheus -n monitoring
 
