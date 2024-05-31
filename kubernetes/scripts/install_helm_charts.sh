@@ -36,7 +36,6 @@ echo "Grafana Password:"
 kubectl get secret --namespace monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode
 echo
 echo "ArgoCD Password:"
-sleep 5000
 kubectl get secret --namespace argocd argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode
 echo
 echo "Ingress-Nginx, Prometheus y Grafana han sido instalados."
