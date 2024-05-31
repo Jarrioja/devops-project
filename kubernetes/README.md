@@ -5,6 +5,12 @@ cd kubernetes/scripts
 ./init.sh
 ```
 
+# Destruir Cluster
+
+```bash
+cd kubernetes/scripts
+./destroy.sh
+```
 
 
 # Instalar nginx-ingress en kubernetes
