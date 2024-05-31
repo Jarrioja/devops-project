@@ -10,10 +10,10 @@ spec:
         image: busybox
         command: ["sh", "-c", "rm -rf /var/lib/mysql/*"]
         volumeMounts:
-        - name: mysql-persistent-storage
+        - name: mysql-pv
           mountPath: /var/lib/mysql
       restartPolicy: OnFailure
       volumes:
-      - name: mysql-persistent-storage
+      - name: mysql-pv
         persistentVolumeClaim:
-          claimName: todo-app-pvc
+          claimName: mysql-pvc
