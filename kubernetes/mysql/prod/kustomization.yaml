@@ -1,0 +1,7 @@
+resources:
+- ../base/
+
+commonLabels:
+  app: mysql
+  env: prod
+namePrefix: prod-

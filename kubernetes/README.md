@@ -1,3 +1,12 @@
+# Inicializar Cluster
+
+```bash
+cd kubernetes/scripts
+./init.sh
+```
+
+
+
 # Instalar nginx-ingress en kubernetes
 
 ```bash

@@ -1,0 +1,9 @@
+resources:
+- ../base/
+commonLabels:
+  app: mysql
+  env: dev
+
+namePrefix: dev-
+
+namespace: dev
