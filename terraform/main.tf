@@ -22,8 +22,15 @@ resource "digitalocean_kubernetes_cluster" "devops-cluster" {
     size       = "s-2vcpu-4gb"
     node_count = 1
   }
+  provisioner "local-exec" {
+    command = "doctl kubernetes cluster kubeconfig save ${digitalocean_kubernetes_cluster.devops-cluster.id}"
+  }
 }
+
 
 output "kubeconfig" {
   value = "doctl kubernetes cluster kubeconfig save ${digitalocean_kubernetes_cluster.devops-cluster.id}"
+
 }
+
+
