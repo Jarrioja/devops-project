@@ -6,6 +6,7 @@
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo add grafana https://grafana.github.io/helm-charts
+helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
 
 # Instalar ingress-nginx
@@ -27,8 +28,15 @@ helm install grafana grafana/grafana \
     --set persistence.storageClassName=standard \
     --set persistence.accessModes={ReadWriteOnce} \
     --set persistence.size=10Gi
+# Instalar Argo CD
+helm install my-argo-cd argo/argo-cd --version 7.0.0 --namespace argocd
 
-echo
+sleep 5
+echo "Grafana Password:"
 kubectl get secret --namespace monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode
+echo
+echo "ArgoCD Password:"
+sleep 5000
+kubectl get secret --namespace argocd argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode
 echo
 echo "Ingress-Nginx, Prometheus y Grafana han sido instalados."
