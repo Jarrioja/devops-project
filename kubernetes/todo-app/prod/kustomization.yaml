@@ -1,6 +1,0 @@
-resources:
-- ../base/
-
-commonLabels:
-  env: prod
-namePrefix: prod-
