@@ -1,7 +1,8 @@
 # Documentacion del Proyecto DEVOPS - Todo App
 Este proyecto consiste en la implementación de un cluster de Kubernetes en DigitalOcean. La infraestructura se configura utilizando Terraform, y se incluyen scripts de inicialización para la configuración y la instalación de aplicaciones clave como Ingress, Prometheus, Grafana y ArgoCD en el Cluster. 
 
-La aplicación desplegada es una aplicación de tareas (To-Do app) desarrollada en NodeJS, con un frontend en React y una API en Express, que requiere una base de datos MySQL.
+La aplicación desplegada es una aplicación de tareas (To-Do app) desarrollada en NodeJS, con un frontend en React y una API en Express, que requiere una base de datos MySQL, pueden encontrar el repo de esta aplicación en **https://github.com/Jarrioja/todo-list-devops**.
+
 ![alt text](images/devops.drawio.png)
 
 ## Arquitectura del Proyecto
@@ -14,11 +15,13 @@ La aplicación desplegada es una aplicación de tareas (To-Do app) desarrollada 
 * **Frontend:** Desarrollado en React.
 * **Backend:** API desarrollada en Express (NodeJS).
 * **Base de Datos:** MySQL.
+
 ![alt text](images/todo-app.png)
 
 ### CI/CD:
 * **GitHub Actions:** Utilizado para CI/CD, con dos ambientes: producción y staging.
 * **ArgoCD:** Se encarga de aplicar los cambios en los repositorios siguiendo el patrón Gitflow.
+
 ![alt text](images/ci-cd.png)
 
 ### Monitoreo:
@@ -26,6 +29,7 @@ La aplicación desplegada es una aplicación de tareas (To-Do app) desarrollada 
 * **Grafana:** Se utiliza para visualizar los datos de Prometheus.
 
 ![alt text](images/grafana-dashboard.png)
+
 ### CDN:
 * **Cloudflare:** Se utiliza para alojar el CDN.
 
