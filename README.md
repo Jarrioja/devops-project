@@ -1,14 +1,5 @@
-# Todo:
-- [x] ~~Repositorio de código en un SVC como GitHub, GitLab o Bitbucket.~~
-- [x] ~~Documentación que describa la arquitectura del proyecto, la configuración de la infraestructura, los pasos de implementación de DevOps y las prácticas seguidas.~~
-- [x] ~~Pipeline de CI/CD configurado y funcionando para el despliegues.~~
-- [x] ~~Aplicación desplegada y ejecutándose correctamente en un clúster de Kubernetes~~
-- [x] ~~Herramientas de observabilidad configuradas y proporcionando información útil sobre el estado y rendimiento de la aplicación~~
-- [x] ~~Cómo funciona, cómo se conecta~~
-- [x] ~~Puntos clave que quieran destacar~~
-
 # Documentacion del Proyecto DEVOPS - Todo App
-Este proyecto consiste en la implementación de un cluster de Kubernetes en DigitalOcean. La infraestructura se configura utilizando Terraform, y se incluyen scripts de inicialización para la configuración y la instalación de aplicaciones clave como Ingress y ArgoCD en el Cluster. 
+Este proyecto consiste en la implementación de un cluster de Kubernetes en DigitalOcean. La infraestructura se configura utilizando Terraform, y se incluyen scripts de inicialización para la configuración y la instalación de aplicaciones clave como Ingress, Prometheus, Grafana y ArgoCD en el Cluster. 
 
 La aplicación desplegada es una aplicación de tareas (To-Do app) desarrollada en NodeJS, con un frontend en React y una API en Express, que requiere una base de datos MySQL.
 ![alt text](images/devops.drawio.png)
