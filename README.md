@@ -15,14 +15,17 @@ La aplicación desplegada es una aplicación de tareas (To-Do app) desarrollada 
 * **Frontend:** Desarrollado en React.
 * **Backend:** API desarrollada en Express (NodeJS).
 * **Base de Datos:** MySQL.
+* **[todo-app.jesusarrioja.com](https://todo-app.jesusarrioja.com/)**
+* **[staging-todo-app.jesusarrioja.com](https://staging-todo-app.jesusarrioja.com/)**
 
-![alt text](images/todo-app.png)
+![alt text](images/argocd.png)
 
 ### CI/CD:
 * **GitHub Actions:** Utilizado para CI/CD, con dos ambientes: producción y staging.
 * **ArgoCD:** Se encarga de aplicar los cambios en los repositorios siguiendo el patrón Gitflow.
 
 ![alt text](images/ci-cd.png)
+![alt text](images/todo-app.png)
 
 ### Monitoreo:
 * **Prometheus:** Se utiliza para monitorear la aplicación y la infraestructura.
