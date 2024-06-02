@@ -36,7 +36,7 @@ La aplicación desplegada es una aplicación de tareas (To-Do app) desarrollada 
 ### CDN:
 * **Cloudflare:** Se utiliza para alojar el CDN.
 
-### Configuración de la Infraestructura
+## Configuración de la Infraestructura
 1. **Terraform**: 
     * Se utiliza Terraform para definir la infraestructura del cluster de Kubernetes en DigitalOcean.
     * El archivo Terraform incluye un bloque local-exec para la configuración del usuario que administrará el Kubernetes.
