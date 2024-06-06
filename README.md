@@ -5,6 +5,9 @@ La aplicación desplegada es una aplicación de tareas (To-Do app) desarrollada 
 
 ![alt text](images/devops.drawio.png)
 
+## Video explicación
+[![Ver video](images/video_thmb.png)](https://youtu.be/u8VHuwMveOY)
+
 ## Arquitectura del Proyecto
 ### Cluster de Kubernetes:
 * **Nodo Único:** Para reducir costos, el cluster de Kubernetes se configura con un solo nodo.
